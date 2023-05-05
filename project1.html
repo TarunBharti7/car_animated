@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+    .sky{
+        height: 100vh;
+        width: 100%;
+        background: url(background.jpg);
+        position: absolute;
+        background-repeat: no-repeat;
+    }
+    .trees{
+        height: 100%;
+        width: 100%;
+        background: url(trees.png);
+        background-size: cover;
+        position: absolute;
+    }
+    .track{
+        height: 60%;
+        width: 100%;
+        background: url(track.png);
+        background-repeat: x-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 85vh;
+        /* animation: carmove linear 6s infinite; */
+    }
+    .car{
+        height: 100px;
+        width: 380px;
+        background: url(car_body.png);
+        background-size: cover;
+        position: absolute;
+        background-repeat: no-repeat;
+        left: 500px;
+    }
+    .wheel1 img{
+        width: 70px;
+        position: relative;
+        top: 40px;
+        left: 46px;
+        animation: wheelrot linear .6s infinite;
+    }
+    .wheel2 img{
+        width: 70px;
+        position: relative;
+        top: -32px;
+        left: 237px;
+        animation: wheelrot linear .6s infinite;
+    }
+
+    @keyframes wheelrot {
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes carmove {
+        100%{
+            transform: translateX(-500vw);
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="sky">
+            <div class="trees">
+                <div class="track">
+                    <div class="car">
+                        <div class="wheel1">
+                            <img src="car_wheel_left.png" alt="">
+                        </div>
+                        <div class="wheel2">
+                            <img src="car_wheel_right.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
